@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './Buscador.module.scss';
-import { CgSearch } from 'react-icons/cg';
+import React from 'react'
+import styles from './Buscador.module.scss'
+import { CgSearch } from 'react-icons/cg'
 
 interface Props {
   busca: string;
@@ -17,5 +17,5 @@ export default function Buscador({ busca, setBusca }: Props) {
       />
       <CgSearch size={20} color="#4C4D5E" />
     </div>
-  );
+  )
 }

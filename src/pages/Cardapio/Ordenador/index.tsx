@@ -1,8 +1,8 @@
-import styles from './Ordenador.module.scss';
-import opcoes from './opcoes.json';
-import React, { useState } from 'react';
-import classNames from 'classnames';
-import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md';
+import styles from './Ordenador.module.scss'
+import opcoes from './opcoes.json'
+import React, { useState } from 'react'
+import classNames from 'classnames'
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md'
 
 interface Props { 
   ordenador: string,
@@ -13,8 +13,8 @@ export default function Ordenador({
   ordenador,
   setOrdenador
 }: Props) {
-  const [aberto, setAberto] = useState(false);
-  const nomeOrdenador = ordenador && opcoes.find(opcao => opcao.value === ordenador)?.nome;
+  const [aberto, setAberto] = useState(false)
+  const nomeOrdenador = ordenador && opcoes.find(opcao => opcao.value === ordenador)?.nome
   return (
     <button
       className={classNames({
@@ -37,5 +37,5 @@ export default function Ordenador({
         ))}
       </div>
     </button>
-  );
+  )
 }
