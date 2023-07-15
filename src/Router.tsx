@@ -10,7 +10,7 @@ import { Routes, Route } from 'react-router-dom'
 
 export function Router() {
   return(
-    <main>
+    <main className='container'>
       <NavMenu />
       <Routes>
         <Route path='/' element={<DefaultPage />}> 
