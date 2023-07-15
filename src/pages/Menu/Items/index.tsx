@@ -1,6 +1,6 @@
 import styles from './Items.module.scss'
 import { Item } from './Item'
-import menu from './items.json'
+import menu from '../../../data/menu.json'
 import { useState, useEffect } from 'react'
 
 
