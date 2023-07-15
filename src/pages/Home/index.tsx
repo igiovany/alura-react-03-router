@@ -6,6 +6,7 @@ export function Home() {
   recommendedDishes = recommendedDishes.sort(() => 0.5 - Math.random()).splice(0,3)
   return (
     <section>
+      
       <h3 className={styles.title}>
         Recomendações da cozinha
       </h3>

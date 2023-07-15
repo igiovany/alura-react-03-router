@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import 'normalize.css'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
-import { AppRouter } from './Router'
+import { Router } from './Router'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AppRouter />
+      <Router />
     </BrowserRouter>
   </React.StrictMode>
 )

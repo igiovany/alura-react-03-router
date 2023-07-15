@@ -1,6 +1,5 @@
 import {useState} from 'react'
 import styles from './Menu.module.scss'
-import { ReactComponent as Logo } from 'assets/logo.svg'
 import { Search } from './Search'
 import { Filters } from './Filters'
 import { Sorter } from './Sorter'
@@ -14,9 +13,6 @@ export function Menu() {
 
   return (
     <main>
-      <nav className={styles.navMenu}>
-        <Logo />
-      </nav>
       <header className={styles.header}>
         <div className={styles.header__text}>
           A casa do código e da massa

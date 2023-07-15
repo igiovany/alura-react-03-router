@@ -1,12 +1,16 @@
+import { NavMenu } from 'components/NavMenu'
 import { Home } from 'pages/Home'
 import { Menu } from 'pages/Menu'
 import { Routes, Route } from 'react-router-dom'
 
-export function AppRouter() {
+export function Router() {
   return(
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/cardapio' element={<Menu />} />
-    </Routes>
+    <>
+      <NavMenu />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/cardapio' element={<Menu />} />
+      </Routes>
+    </>
   )
 }
