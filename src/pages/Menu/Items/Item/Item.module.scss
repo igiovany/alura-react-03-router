@@ -1,4 +1,4 @@
-@import "styles/variaveis";
+@import "styles/variables";
 @import "styles/breakpoints";
 
 $massas: #d73b3b;
@@ -10,7 +10,7 @@ $veganos: #80aa40;
   display: flex;
   flex-wrap: wrap;
   width: 90%;
-  &__imagem {
+  &__image {
     min-width: 240px;
     @media (max-width: $desktop_xsm) {
       width: 100%;
@@ -20,7 +20,7 @@ $veganos: #80aa40;
       width: 100%;
     }
   }
-  &__descricao {
+  &__description {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -33,7 +33,7 @@ $veganos: #80aa40;
       padding: 0;
     }
   }
-  &__titulo {
+  &__title {
     h2 {
       font-size: 2rem;
       font-weight: bold;
@@ -63,7 +63,7 @@ $veganos: #80aa40;
       margin: 10px;
     }
   }
-  &__tipo {
+  &__type {
     align-items: center;
     border-radius: 2px;
     display: flex;
@@ -86,16 +86,16 @@ $veganos: #80aa40;
       background-color: $veganos;
     }
   }
-  &__porcao,
-  &__qtdpessoas,
-  &__valor {
+  &__portion,
+  &__peopleqty,
+  &__price {
     align-items: center;
     display: flex;
     font-size: 1.25rem;
     font-weight: bold;
     justify-content: center;
   }
-  &__valor {
+  &__price {
     color: $red;
     font-size: 1.7rem;
   }

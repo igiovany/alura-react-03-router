@@ -1,6 +1,7 @@
-@import "styles/variaveis";
+@import "styles/variables";
 
-.ordenador {
+
+.sorter {
   align-items: center;
   background-color: $grey;
   border: none;
@@ -14,7 +15,7 @@
   min-width: 240px;
   padding: 0 40px;
   position: relative;
-  &--ativo {
+  &--active {
     background-color: $blue;
     color: white;
   }
@@ -25,7 +26,7 @@
     flex-direction: column;
     top: 100%;
     width: 100%;
-    &--ativo {
+    &--active {
       display: flex;
     }
   }
@@ -40,7 +41,7 @@
     justify-content: center;
     width: inherit;
     &:hover,
-    &--ativo {
+    &--active {
       background-color: $blue;
       cursor: pointer;
       color: white;

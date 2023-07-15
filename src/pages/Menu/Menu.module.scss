@@ -1,7 +1,7 @@
-@import "styles/variaveis";
+@import "styles/variables";
 @import "styles/breakpoints";
 
-.menu {
+.navMenu {
   padding: 20px $padding-horizontal;
   @media (max-width: $desktop_xsm) {
     padding: 20px $padding-horizontal-mobile;
@@ -16,7 +16,7 @@
 
 .header {
   align-items: center;
-  background-image: url("/assets/cardapio/header.png");
+  background-image: url("/assets/menu/header.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -39,7 +39,7 @@
   }
 }
 
-.cardapio {
+.menu {
   padding: 50px $padding-horizontal;
   @media (max-width: $desktop_xsm) {
     padding: 50px $padding-horizontal-mobile;
@@ -50,12 +50,12 @@
   @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
     padding: 50px $padding-horizontal-md;
   }
-  &__titulo {
+  &__title {
     color: $dark;
     font-size: 3rem;
     margin-bottom: 30px;
   }
-  &__filtros {
+  &__filters {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
