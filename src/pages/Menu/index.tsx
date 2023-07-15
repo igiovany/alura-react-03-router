@@ -1,9 +1,10 @@
 import {useState} from 'react'
-import styles from './Menu.module.scss'
 import { Search } from './Search'
 import { Filters } from './Filters'
 import { Sorter } from './Sorter'
 import { Items } from './Items'
+import styles from './Menu.module.scss'
+import stylesTheme from 'styles/Theme.module.scss'
 
 export function Menu() {
 
@@ -13,7 +14,7 @@ export function Menu() {
 
   return (
     <section className={styles.menu}>
-      <h3 className={styles.menu__title}>Cardápio</h3>
+      <h3 className={stylesTheme.title}>Cardápio</h3>
       <Search search={search} setSearch={setSearch}/>
       <div className={styles.menu__filters}>
         <Filters filter={filter} setFilter={setFilter} />
