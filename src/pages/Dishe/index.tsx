@@ -5,8 +5,8 @@ import { NotFound } from 'pages/NotFound'
 import { DisheTags } from 'components/DisheTags'
 
 export function Dishe() {
-  const { id } = useParams()
   const navigate = useNavigate()
+  const { id } = useParams()
   const dishe = menu.find(item => item.id === Number(id))
 
   if (!dishe) {
