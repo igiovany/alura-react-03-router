@@ -3,6 +3,7 @@ import styles from './Home.module.scss'
 import stylesTheme from 'styles/Theme.module.scss'
 import ourPlace from 'assets/our_place.png'
 import {useNavigate} from 'react-router-dom'
+import { Dishe } from 'types/Dishe'
 
 export function Home() {
   let recommendedDishes = [...menu]
@@ -10,7 +11,7 @@ export function Home() {
   const navigate = useNavigate()
 
 
-  function handleDisheDetail(dishe: typeof menu[0]) {
+  function handleDisheDetail(dishe: Dishe) {
     navigate(`/prato/${dishe.id}`, {state: { dishe }})
   }
 

@@ -18,6 +18,8 @@ export function Router() {
           <Route index element={<Home />} />
           <Route path='cardapio' element={<Menu />} />
           <Route path='sobre' element={<About />} />
+          <Route path='prato/:id' element={<Dishe />} />
+
         </Route>
         <Route path='*' element={<NotFound />} />
         <Route path='prato/:id' element={<Dishe />} />

@@ -1,14 +1,21 @@
 import styles from './Dishe.module.scss'
-import { useLocation } from 'react-router-dom'
-import classNames from 'classnames'
+import { useParams, useNavigate } from 'react-router-dom'
 import menu from 'data/menu.json'
+import { NotFound } from 'pages/NotFound'
+import { DisheTags } from 'components/DisheTags'
 
 export function Dishe() {
-  const { state } = useLocation()
-  const { dishe } = state as { dishe: typeof menu[0]}
+  const { id } = useParams()
+  const navigate = useNavigate()
+  const dishe = menu.find(item => item.id === Number(id))
+
+  if (!dishe) {
+    return <NotFound />
+  }
+
   return (
     <>
-      <button className={styles.back} >
+      <button className={styles.back} onClick={() => navigate(-1)}>
         {'< Voltar'}
       </button>
       <section className={styles.container}>
@@ -22,23 +29,7 @@ export function Dishe() {
           <p className={styles.content__description}>
             {dishe.description}
           </p>
-          <div className={styles.tags}>
-            <div className={classNames({
-              [styles.tags__type]: true,
-              [styles[`tags__type__${dishe.category.label.toLowerCase()}`]]: true
-            })}>
-              {dishe.category.label}
-            </div>
-            <div className={styles.tags__portion}>
-              {dishe.size}g
-            </div>
-            <div className={styles.tags__peopleqty}>
-              Serve {dishe.serving} pessoa{dishe.serving === 1 ? '' : 's'}
-            </div>
-            <div className={styles.tags__price}>
-              {dishe.price.toFixed(0)}
-            </div>
-          </div>
+          <DisheTags {...dishe} />
         </div>
       </section>
     </>
