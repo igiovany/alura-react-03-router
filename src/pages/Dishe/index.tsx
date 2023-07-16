@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import menu from 'data/menu.json'
 import { NotFound } from 'pages/NotFound'
 import { DisheTags } from 'components/DisheTags'
+import { DefaultPage } from 'components/DefaultPage'
 
 export function Dishe() {
   const navigate = useNavigate()
@@ -14,7 +15,7 @@ export function Dishe() {
   }
 
   return (
-    <>
+    <DefaultPage>
       <button className={styles.back} onClick={() => navigate(-1)}>
         {'< Voltar'}
       </button>
@@ -32,6 +33,6 @@ export function Dishe() {
           <DisheTags {...dishe} />
         </div>
       </section>
-    </>
+    </ DefaultPage>
   )
 }

@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 import stylesTheme from 'styles/Theme.module.scss'
 
 
-export function DefaultPage() {
+export function DefaultPage({ children }: { children?: React.ReactNode}) {
   return (
     <>
       <header className={styles.header}>
@@ -13,6 +13,7 @@ export function DefaultPage() {
       </header>
       <div className={stylesTheme.container} >
         <Outlet />
+        {children}
       </div>
     </>
   )
