@@ -2,10 +2,18 @@ import menu from '../../data/menu.json'
 import styles from './Home.module.scss'
 import stylesTheme from 'styles/Theme.module.scss'
 import ourPlace from 'assets/our_place.png'
+import {useNavigate} from 'react-router-dom'
 
 export function Home() {
   let recommendedDishes = [...menu]
   recommendedDishes = recommendedDishes.sort(() => 0.5 - Math.random()).splice(0, 3)
+  const navigate = useNavigate()
+
+
+  function handleDisheDetail(dishe: typeof menu[0]) {
+    navigate(`/prato/${dishe.id}`, {state: { dishe }})
+  }
+
   return (
     <section>
 
@@ -18,7 +26,10 @@ export function Home() {
             <div className={styles.recommended__image} >
               <img src={item.photo} alt={item.title} />
             </div>
-            <button className={styles.recommended__button}>
+            <button
+              className={styles.recommended__button}
+              onClick={() => handleDisheDetail(item)}
+            >
               Ver Mais
             </button>
           </div>
